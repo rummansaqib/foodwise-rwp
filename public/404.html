@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FoodWise RWP</title>
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages (https://github.com/rafgraph/spa-github-pages)
+      // GitHub Pages has no server-side rewrite, so a hard refresh or a
+      // shared link to a deep route (e.g. /restaurants/r1) would 404
+      // without this. It redirects back to index.html with the intended
+      // path encoded in the query string; index.html's inline script
+      // (see below) decodes it before React Router mounts.
+      //
+      // pathSegmentsToKeep = 1 assumes the app is served at
+      // https://<username>.github.io/<repo-name>/ (a standard GitHub
+      // Pages "project site"). If you instead deploy to a custom domain
+      // at the root, change this to 0.
+      var pathSegmentsToKeep = 1;
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

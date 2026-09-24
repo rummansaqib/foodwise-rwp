@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+*.log
+.env
+android/
+ios/
+backend/venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/foodwise.db
